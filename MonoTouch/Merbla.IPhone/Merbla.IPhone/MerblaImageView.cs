@@ -46,6 +46,7 @@ namespace Merbla.IPhone
 		public override void TouchesEnded (MonoTouch.Foundation.NSSet touches, MonoTouch.UIKit.UIEvent e)
 		{
 			StartLocation = Location; 
+			//Publish to aggregator
 			_aggregator.Publish(new MovementFinished {FinishDateTime =DateTime.Now});
 		}
 	}

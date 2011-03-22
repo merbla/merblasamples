@@ -93,7 +93,7 @@ namespace Merbla.IPhone
                     var target = reference.Target as IHandle<TMessage>;
 
                     if(target != null)
-                        target.Handle(message);
+                        target.HandleEvent(message);
                     else if(!reference.IsAlive)
                         dead.Add(reference);
                 }

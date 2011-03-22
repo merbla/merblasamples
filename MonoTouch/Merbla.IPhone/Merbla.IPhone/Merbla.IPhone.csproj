@@ -94,6 +94,7 @@
     <Compile Include="IHandle.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="MerblaImageView.cs" />
+    <Compile Include="ConsoleHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xib" />

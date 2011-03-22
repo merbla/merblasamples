@@ -16,32 +16,25 @@ namespace Merbla.IPhone
 			UIApplication.Main (args);
 		}
 	}
+	 
 	
-	public class Test :IHandle<MovementFinished>
-	{
-		public void Handle(MovementFinished message)
-		{
-			Console.WriteLine("Movement finished" + message.FinishDateTime.ToLongDateString());
-		}
-		
-	}
-	
-	
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : UIApplicationDelegate,IHandle<MovementFinished>
 	{
 		protected IEventAggregator EventAggregator {get;set;}
+		
+		private ConsoleHandler Handler {get;set;}
 		
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			//Initialise the aggregator
 			EventAggregator = new EventAggregator();
-			 
-			EventAggregator.Subscribe(new Test());
+			Handler = new ConsoleHandler(EventAggregator); 
+			EventAggregator.Subscribe(this);
 			
 			///Create a ui view 
 			var img = new MerblaImageView(EventAggregator,  new RectangleF(64,64,64,64));
 			img.UserInteractionEnabled = true;
-			img.BackgroundColor = UIColor.Green;
+			img.BackgroundColor = UIColor.Red;
 			img.Hidden = false;
 
 			window.AddSubview(img);
@@ -50,6 +43,13 @@ namespace Merbla.IPhone
 			return true;
 		}
     
+		
+		public void HandleEvent(MovementFinished message)
+		{
+			this.outputLabel.Text += Environment.NewLine + message.FinishDateTime.ToShortTimeString();
+		}
+		
+		
 		public void Dispatch (Action action)
 		{
 			InvokeOnMainThread (delegate { action.Invoke (); });

@@ -20,7 +20,7 @@ namespace Merbla.IPhone
         /// Handles the message.
         /// </summary>
         /// <param name="message">The message.</param>
-        void Handle(TMessage message);
+        void HandleEvent(TMessage message);
     }
 }
 
