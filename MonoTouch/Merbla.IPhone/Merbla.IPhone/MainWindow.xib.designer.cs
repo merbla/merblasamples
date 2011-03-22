@@ -17,6 +17,8 @@ namespace Merbla.IPhone {
 		
 		private MonoTouch.UIKit.UIWindow __mt_window;
 		
+		private MonoTouch.UIKit.UILabel __mt_outputLabel;
+		
 		#pragma warning disable 0169
 		[MonoTouch.Foundation.Connect("window")]
 		private MonoTouch.UIKit.UIWindow window {
@@ -27,6 +29,18 @@ namespace Merbla.IPhone {
 			set {
 				this.__mt_window = value;
 				this.SetNativeField("window", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("outputLabel")]
+		private MonoTouch.UIKit.UILabel outputLabel {
+			get {
+				this.__mt_outputLabel = ((MonoTouch.UIKit.UILabel)(this.GetNativeField("outputLabel")));
+				return this.__mt_outputLabel;
+			}
+			set {
+				this.__mt_outputLabel = value;
+				this.SetNativeField("outputLabel", value);
 			}
 		}
 	}

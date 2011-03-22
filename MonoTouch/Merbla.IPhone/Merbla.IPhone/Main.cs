@@ -5,6 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Threading;
+ using System.Drawing;
 
 namespace Merbla.IPhone
 {
@@ -15,28 +16,41 @@ namespace Merbla.IPhone
 			UIApplication.Main (args);
 		}
 	}
-
-	// The name AppDelegate is referenced in the MainWindow.xib file.
+	
+	public class Test :IHandle<MovementFinished>
+	{
+		public void Handle(MovementFinished message)
+		{
+			Console.WriteLine("Movement finished" + message.FinishDateTime.ToLongDateString());
+		}
+		
+	}
+	
+	
 	public partial class AppDelegate : UIApplicationDelegate
 	{
-		// This method is invoked when the application has loaded its UI and its ready to run
+		protected IEventAggregator EventAggregator {get;set;}
+		
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			// If you have defined a view, add it here:
-			// window.AddSubview (navigationController.View);
+			//Initialise the aggregator
+			EventAggregator = new EventAggregator();
+			 
+			EventAggregator.Subscribe(new Test());
 			
+			///Create a ui view 
+			var img = new MerblaImageView(EventAggregator,  new RectangleF(64,64,64,64));
+			img.UserInteractionEnabled = true;
+			img.BackgroundColor = UIColor.Green;
+			img.Hidden = false;
+
+			window.AddSubview(img);
 			window.MakeKeyAndVisible ();
 			
 			return true;
 		}
-
-		// This method is required in iPhoneOS 3.0
-		public override void OnActivated (UIApplication application)
-		{
-		}
-		
-		
-			public void Dispatch (Action action)
+    
+		public void Dispatch (Action action)
 		{
 			InvokeOnMainThread (delegate { action.Invoke (); });
 		}
@@ -71,4 +85,4 @@ namespace Merbla.IPhone
 	
 	
 }
-
+ 

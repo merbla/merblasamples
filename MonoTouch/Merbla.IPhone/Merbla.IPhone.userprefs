@@ -1,16 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Merbla.IPhone/EventAggregator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Merbla.IPhone/Main.cs">
     <Files>
-      <File FileName="Merbla.IPhone/Main.cs" Line="7" Column="24" />
-      <File FileName="Merbla.IPhone/EventAggregator.cs" Line="91" Column="28" />
-      <File FileName="Merbla.IPhone/Logger.cs" Line="49" Column="6" />
+      <File FileName="Merbla.IPhone/Main.cs" Line="24" Column="44" />
+      <File FileName="Merbla.IPhone/MerblaImageView.cs" Line="7" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Merbla.IPhone" expanded="True">
-            <Node name="EventAggregator.cs" selected="True" />
+            <Node name="Main.cs" selected="True" />
           </Node>
         </State>
       </Pad>

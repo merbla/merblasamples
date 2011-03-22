@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -92,6 +93,7 @@
     <Compile Include="Logger.cs" />
     <Compile Include="IHandle.cs" />
     <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="MerblaImageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xib" />
