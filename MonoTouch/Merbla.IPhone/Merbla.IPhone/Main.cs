@@ -42,45 +42,14 @@ namespace Merbla.IPhone
 			
 			return true;
 		}
-    
-		
+     
+				
 		public void HandleEvent(MovementFinished message)
 		{
-			this.outputLabel.Text += Environment.NewLine + message.FinishDateTime.ToShortTimeString();
+			dragWindowOutputLabel.Text += Environment.NewLine + message.FinishDateTime.ToShortTimeString();
 		}
 		
-		
-		public void Dispatch (Action action)
-		{
-			InvokeOnMainThread (delegate { action.Invoke (); });
-		}
- 
-		public void ExecuteAsync (Action actionToExecute, Action callBack)
-		{
-			ExecuteAsync (() =>
-			{
-				actionToExecute ();
-				Dispatch (callBack);
-			});
-		}
-		 
-		
-		public void ExecuteAsync (Action actionToExecute)
-		{
-			Action<object> asyncProcess = obj =>
-			{
-				try {
-					actionToExecute ();
-				} catch (Exception ex) {
-					Dispatch (() =>
-					{
-						throw new Exception ("Error occured in async process", ex);
-					});
-				}
-			};
-			 
-			ThreadPool.QueueUserWorkItem (new WaitCallback (asyncProcess));
-		}
+
 	}
 	
 	

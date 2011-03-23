@@ -1,15 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Merbla.IPhone/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Merbla.IPad/Main.cs">
     <Files>
-      <File FileName="Merbla.IPhone/Main.cs" Line="24" Column="44" />
-      <File FileName="Merbla.IPhone/MerblaImageView.cs" Line="7" Column="22" />
+      <File FileName="Merbla.IPad/Main.cs" Line="25" Column="23" />
+      <File FileName="Merbla.MonoTouch.Core/Data/WebRepository.cs" Line="7" Column="4" />
+      <File FileName="Merbla.MonoTouch.Core/Data/IRepository.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Merbla.IPhone" expanded="True">
-            <Node name="Main.cs" selected="True" />
+          <Node name="Merbla.IPad" expanded="True">
+            <Node name="References" expanded="True" selected="True" />
+          </Node>
+          <Node name="Merbla.MonoTouch.Core" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Data" expanded="True" />
           </Node>
         </State>
       </Pad>

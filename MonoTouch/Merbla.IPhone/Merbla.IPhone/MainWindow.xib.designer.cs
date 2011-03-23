@@ -17,7 +17,9 @@ namespace Merbla.IPhone {
 		
 		private MonoTouch.UIKit.UIWindow __mt_window;
 		
-		private MonoTouch.UIKit.UILabel __mt_outputLabel;
+		private MonoTouch.UIKit.UILabel __mt_webServiceOutputLabel;
+		
+		private MonoTouch.UIKit.UILabel __mt_dragWindowOutputLabel;
 		
 		#pragma warning disable 0169
 		[MonoTouch.Foundation.Connect("window")]
@@ -32,15 +34,27 @@ namespace Merbla.IPhone {
 			}
 		}
 		
-		[MonoTouch.Foundation.Connect("outputLabel")]
-		private MonoTouch.UIKit.UILabel outputLabel {
+		[MonoTouch.Foundation.Connect("webServiceOutputLabel")]
+		private MonoTouch.UIKit.UILabel webServiceOutputLabel {
 			get {
-				this.__mt_outputLabel = ((MonoTouch.UIKit.UILabel)(this.GetNativeField("outputLabel")));
-				return this.__mt_outputLabel;
+				this.__mt_webServiceOutputLabel = ((MonoTouch.UIKit.UILabel)(this.GetNativeField("webServiceOutputLabel")));
+				return this.__mt_webServiceOutputLabel;
 			}
 			set {
-				this.__mt_outputLabel = value;
-				this.SetNativeField("outputLabel", value);
+				this.__mt_webServiceOutputLabel = value;
+				this.SetNativeField("webServiceOutputLabel", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("dragWindowOutputLabel")]
+		private MonoTouch.UIKit.UILabel dragWindowOutputLabel {
+			get {
+				this.__mt_dragWindowOutputLabel = ((MonoTouch.UIKit.UILabel)(this.GetNativeField("dragWindowOutputLabel")));
+				return this.__mt_dragWindowOutputLabel;
+			}
+			set {
+				this.__mt_dragWindowOutputLabel = value;
+				this.SetNativeField("dragWindowOutputLabel", value);
 			}
 		}
 	}

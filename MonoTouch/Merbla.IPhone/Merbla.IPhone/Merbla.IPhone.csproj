@@ -80,6 +80,18 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="OpenTK" />
+    <Reference Include="RestSharp.MonoTouch, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\RestSharp.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.MonoTouch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\Newtonsoft.Json.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.Dialog, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MonoTouch.Dialog.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -89,12 +101,13 @@
       <DependentUpon>MainWindow.xib</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
-    <Compile Include="EventAggregator.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="IHandle.cs" />
-    <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="MerblaImageView.cs" />
-    <Compile Include="ConsoleHandler.cs" />
+    <Compile Include="AppDelegate.Helper.cs" />
+    <Compile Include="OldFiles\IHandle.cs" />
+    <Compile Include="OldFiles\ConsoleHandler.cs" />
+    <Compile Include="OldFiles\EventAggregator.cs" />
+    <Compile Include="OldFiles\ExtensionMethods.cs" />
+    <Compile Include="OldFiles\Logger.cs" />
+    <Compile Include="UI\MerblaImageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xib" />
@@ -105,4 +118,8 @@
       <Properties InternalTargetFrameworkVersion="IPhone" />
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="OldFiles\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
 </Project>
