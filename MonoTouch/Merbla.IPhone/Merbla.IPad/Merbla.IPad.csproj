@@ -93,6 +93,7 @@
       <DependentUpon>MainWindow.xib</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.Helper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xib" />

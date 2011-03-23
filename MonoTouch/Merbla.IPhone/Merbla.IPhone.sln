@@ -51,6 +51,6 @@ Global
 		{ED92D556-6A82-4E29-8607-3EEB7B95330B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Merbla.IPhone.Web\Merbla.IPhone.Web.csproj
+		StartupItem = Merbla.IPad\Merbla.IPad.csproj
 	EndGlobalSection
 EndGlobal

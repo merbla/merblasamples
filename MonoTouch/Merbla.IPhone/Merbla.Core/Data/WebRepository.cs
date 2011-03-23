@@ -21,7 +21,7 @@ namespace Merbla.Core
 		private IRestClient Client {
 			get {
 				if (_client == null) {
-					_client = new RestClient ("http://localhost:120");
+					_client = new RestClient ("http://127.0.0.1:8080/");
 					_client.Timeout = 20000;
 				}
 				return _client;
@@ -35,7 +35,7 @@ namespace Merbla.Core
 			Client.ExecuteAsync (request, x =>
 			{ 
 				var people = JsonConvert.DeserializeObject<List<Person>> (x.Content); 
-				 
+				_messageHub.PublishAsync(new PeopleMessage(this, people));
 			});
 		}
 	}
@@ -44,7 +44,7 @@ namespace Merbla.Core
 
 	public class GetPeopleRequest : RestRequest
 	{
-		public GetPeopleRequest () : base("service/game/", Method.GET)
+		public GetPeopleRequest () : base("service/getdata", Method.GET)
 		{
 			RequestFormat = DataFormat.Json;
 		}

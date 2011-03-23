@@ -100,6 +100,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="UI\" />
+    <Folder Include="Messages\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\IRepository.cs" />
@@ -107,5 +108,7 @@
     <Compile Include="..\Merbla.IPhone.Web\Models\Person.cs">
       <Link>Data\Person.cs</Link>
     </Compile>
+    <Compile Include="Messages\PeopleMessage.cs" />
+    <Compile Include="UI\MerblaBaseView.cs" />
   </ItemGroup>
 </Project>

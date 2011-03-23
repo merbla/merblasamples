@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merbla.IPhone.Web", "Merbla.IPhone.Web.csproj", "{783A6318-B3B7-43E1-93C6-43DEF2A23C6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{783A6318-B3B7-43E1-93C6-43DEF2A23C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783A6318-B3B7-43E1-93C6-43DEF2A23C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783A6318-B3B7-43E1-93C6-43DEF2A23C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783A6318-B3B7-43E1-93C6-43DEF2A23C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Merbla.IPhone.Web.csproj
+	EndGlobalSection
+EndGlobal
